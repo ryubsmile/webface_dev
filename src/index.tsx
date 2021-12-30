@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Title from './01-title/title';
+import Home from './02-home/home';
 import './index.css';
 
 ReactDOM.render(
-  <React.StrictMode></React.StrictMode>,
+  <React.StrictMode>
+    <Title />
+    <Home />
+    <Title />
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
