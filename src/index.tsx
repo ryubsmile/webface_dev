@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Title from './01-title/title';
 import Home from './02-home/home';
+import Tile from './00-experimental/glassmorphTile';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <Title />
-    <Home />
+    <Tile>
+      <Home />
+    </Tile>
     <Title />
   </React.StrictMode>,
   document.getElementById('root')
