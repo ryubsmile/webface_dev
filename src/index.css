@@ -5,28 +5,49 @@
   font-weight: normal;
 }
 
+html {
+  background-color: #111111;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   border: none;
   min-height: 100vh;
-  background-color: #111111;
+  /* background-color: #111111; */
   color: #eeeeee;
   font-family: 'Roboto Mono', 'Roboto', -apple-system, 'Helvetica Neue';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 20pt;
+  font-size: 20px;
 }
 
-body {
+/* body {
   background-size: cover;
-  background-image: url(./background3.jpg);
+  background-image: url(./background-images/background4.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  z-index: -1;
+  background-position-x: center;
+} */
+
+body:before {
+  content: '';
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background: url(./background-images/background4.jpeg) no-repeat center center;
+  background-size: cover;
 }
 
-#root {
-  /* backdrop-filter: blur(5px); */
+hr {
+  border-color: transparent;
+}
+
+.page-wrapper {
+  padding: 0 10px;
 }

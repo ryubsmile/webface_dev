@@ -4,14 +4,26 @@ import Title from './01-title/title';
 import Home from './02-home/home';
 import Tile from './00-experimental/glassmorphTile';
 import './index.css';
+import AmnestyPLUS from './03-amnestyplus/AmnestyPLUS';
 
+function App() {
+  return (
+    <div className="page-wrapper">
+      <Title />
+      <Tile>
+        <Home />
+      </Tile>
+      <Tile>
+        <AmnestyPLUS />
+      </Tile>
+    </div>
+  );
+}
+
+// RENDER
 ReactDOM.render(
   <React.StrictMode>
-    <Title />
-    <Tile>
-      <Home />
-    </Tile>
-    <Title />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

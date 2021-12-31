@@ -1,5 +1,5 @@
 import './title.css';
 
 export default function Title() {
-  return <div id="title"></div>;
+  return <div id="title">WebFace</div>;
 }
