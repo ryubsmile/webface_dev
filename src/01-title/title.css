@@ -4,3 +4,12 @@
   text-align: center;
   line-height: 100vh;
 }
+
+.webface {
+  position: relative;
+}
+
+.pg {
+  position: relative;
+  bottom: 100%;
+}

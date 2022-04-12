@@ -2,20 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Title from './01-title/title';
 import Home from './02-home/home';
-import Tile from './00-experimental/glassmorphTile';
+import Contact from './99-contact/contact';
 import './index.css';
-import AmnestyPLUS from './03-amnestyplus/AmnestyPLUS';
+
+//import GlassTile from './00-experimental/glassmorphTile';
+//import AmnestyPLUS from './03-amnestyplus/AmnestyPLUS';
 
 function App() {
   return (
     <div className="page-wrapper">
       <Title />
-      <Tile>
-        <Home />
-      </Tile>
-      <Tile>
-        <AmnestyPLUS />
-      </Tile>
+      <Home />
+      <br />
+      <Contact />
     </div>
   );
 }

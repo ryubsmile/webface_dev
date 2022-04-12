@@ -15,21 +15,24 @@ body {
   padding: 0;
   border: none;
   min-height: 100vh;
-  /* background-color: #111111; */
   color: #eeeeee;
-  font-family: 'Roboto Mono', 'Roboto', -apple-system, 'Helvetica Neue';
+  font-family: 'Roboto Mono', 'Roboto', -apple-system, 'Helvetica Neue',
+    'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 20px;
 }
 
-/* body {
+/* background insert */
+/*
+body {
   background-size: cover;
   background-image: url(./background-images/background4.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position-x: center;
-} */
+}
+*/
 
 body:before {
   content: '';
@@ -40,7 +43,7 @@ body:before {
   width: 100vw;
   height: 100vh;
   z-index: -10;
-  background: url(./background-images/background4.jpeg) no-repeat center center;
+  /* background: url(./background-images/background4.jpeg) no-repeat center center; */
   background-size: cover;
 }
 
@@ -49,5 +52,12 @@ hr {
 }
 
 .page-wrapper {
-  padding: 0 10px;
+  padding: 0 10px 10vh;
+}
+
+/* going to be used by every page. */
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  font-weight: normal;
 }
