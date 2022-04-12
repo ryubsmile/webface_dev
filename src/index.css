@@ -20,7 +20,7 @@ body {
     'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /* background insert */
@@ -60,4 +60,10 @@ h3 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 30px;
   font-weight: normal;
+  margin: 30px 0px 10px;
+}
+
+.exp {
+  color: gray;
+  font-size: 16px;
 }

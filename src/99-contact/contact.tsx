@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Fade } from 'react-awesome-reveal';
+import CustomFade from '../00-experimental/customFade';
 import './contact.css';
 
 export default function Contact() {
   return (
     <div className="section">
       <ContactTitle />
-      <Fade duration={400} direction="up" fraction={0.5} damping={0.2}>
+      <CustomFade>
         <>
           I currently live in Korea; I can read your message right away between
           EST 8PM and 10AM.
         </>
-      </Fade>
+      </CustomFade>
     </div>
   );
 }
@@ -25,24 +25,27 @@ function ContactTitle() {
   }, []);
   const currentHour = dateState.getHours();
 
-  // Available time in KST! for now, start hr has to be smaller than end hr.
+  // Available time in KST 9 AM ~ 8 PM, EST 8 PM to 7 AM
+  // for now, start hr has to be smaller than end hr.
   const [workStartHourKST, workEndHourKST] = [9, 20];
-
   const [remainingWorkTime, timeUntilWorkTime] = [
     getLeftTime(dateState, getLeftHours(currentHour, workEndHourKST)),
     getLeftTime(dateState, getLeftHours(currentHour, workStartHourKST)),
   ];
 
   const available = (
-    <h3>
-      I'm available <span id="green"> NOW</span>! Until...{remainingWorkTime}
-    </h3>
+    <>
+      <h3>
+        I'm available <span id="green"> NOW</span>!{' '}
+        <span className="exp">And until {remainingWorkTime}.</span>
+      </h3>
+    </>
   );
 
   const notAvailable = (
     <h3>
-      I'm available <span id="red">LATER</span>! I'll be back in{' '}
-      {timeUntilWorkTime}
+      I'm available <span id="red">LATER</span>!
+      <span className="exp">I'll be back in {timeUntilWorkTime}</span>
     </h3>
   );
 
@@ -55,12 +58,12 @@ function ContactTitle() {
   );
 }
 
-const getLeftHours = (hourFrom: number, hourTo: number) => {
+const getLeftHours = (hourFrom: number, hourTo: number): number => {
   while (hourTo < hourFrom) hourTo += 12;
   return hourTo - hourFrom;
 };
 
-const getLeftTime = (dateNow: Date, leftHours: number) => {
+const getLeftTime = (dateNow: Date, leftHours: number): string => {
   const goalDate = new Date();
   goalDate.setHours(dateNow.getHours() + leftHours); // update hours
   goalDate.setMinutes(0, 0, 0); // minutes, seconds = 00:00
