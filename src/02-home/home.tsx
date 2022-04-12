@@ -1,5 +1,4 @@
 import './home.css';
-import { Fade } from 'react-awesome-reveal';
 import CustomFade from '../00-experimental/customFade';
 
 export default function Home() {

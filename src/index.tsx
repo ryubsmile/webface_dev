@@ -5,6 +5,9 @@ import Home from './02-home/home';
 import Contact from './99-contact/contact';
 import './index.css';
 
+// "react-reveal": "^1.2.2",
+// "moment": "^2.29.2",
+
 //import GlassTile from './00-experimental/glassmorphTile';
 //import AmnestyPLUS from './03-amnestyplus/AmnestyPLUS';
 
