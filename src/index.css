@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   border: none;
+  user-select: none;
   min-height: 100vh;
   color: #eeeeee;
   font-family: 'Roboto Mono', 'Roboto', -apple-system, 'Helvetica Neue',
@@ -24,13 +25,14 @@ body {
 }
 
 /* background insert */
+
 /*
 body {
-  background-size: cover;
-  background-image: url(./background-images/background4.jpeg);
-  background-attachment: fixed;
+  background-size: auto 100%;
+  background-image: url(./background-images/profile.JPG);
   background-repeat: no-repeat;
-  background-position-x: center;
+  background-position-x: 100%;
+  background
 }
 */
 
@@ -43,8 +45,10 @@ body:before {
   width: 100vw;
   height: 100vh;
   z-index: -10;
-  /* background: url(./background-images/background4.jpeg) no-repeat center center; */
-  background-size: cover;
+  /* background: url(./background-images/profile.JPG) no-repeat; */
+  background-position-x: 100%;
+  background-size: 60% auto;
+  filter: grayscale(50%);
 }
 
 hr {
@@ -55,12 +59,21 @@ hr {
   padding: 0 10px 10vh;
 }
 
-/* going to be used by every page. */
+/* section header */
 h3 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 30px;
   font-weight: normal;
   margin: 30px 0px 10px;
+}
+
+/* section subheader */
+h5 {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 15px 0px 5px;
+  text-decoration: underline;
 }
 
 .exp {

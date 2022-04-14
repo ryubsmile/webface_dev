@@ -25,6 +25,22 @@ function ContactTitle() {
   }, []);
   const currentHour = dateState.getHours();
 
+  const getLeftHours = (hourFrom: number, hourTo: number): number => {
+    while (hourTo < hourFrom) hourTo += 12;
+    return hourTo - hourFrom;
+  };
+
+  const getLeftTime = (dateNow: Date, leftHours: number): string => {
+    const goalDate = new Date();
+    goalDate.setHours(dateNow.getHours() + leftHours); // update hours
+    goalDate.setMinutes(0, 0, 0); // minutes, seconds = 00:00
+
+    const diffDate = new Date(0);
+    diffDate.setMilliseconds(goalDate.getTime() - dateNow.getTime());
+
+    return diffDate.toISOString().substring(11, 19);
+  };
+
   // Available time in KST 9 AM ~ 8 PM, EST 8 PM to 7 AM
   // for now, start hr has to be smaller than end hr.
   const [workStartHourKST, workEndHourKST] = [9, 20];
@@ -33,19 +49,30 @@ function ContactTitle() {
     getLeftTime(dateState, getLeftHours(currentHour, workStartHourKST)),
   ];
 
+  // given a string length of 8, adds h, m, s in between. truncates leading 0.
+  // prettier-ignore
+  const timeFormatter = (timeString: string) =>
+    `${+timeString.substring(0, 2)}h 
+     ${+timeString.substring(3, 5)}m 
+     ${+timeString.substring(6, 8)}s`;
+
   const available = (
     <>
       <h3>
-        I'm available <span id="green"> NOW</span>!{' '}
-        <span className="exp">And until {remainingWorkTime}.</span>
+        I'M AVAILABLE <span id="green"> NOW</span>!{' '}
+        <span className="exp">
+          and until {timeFormatter(remainingWorkTime)} later...
+        </span>
       </h3>
     </>
   );
 
   const notAvailable = (
     <h3>
-      I'm available <span id="red">LATER</span>!
-      <span className="exp">I'll be back in {timeUntilWorkTime}</span>
+      I'M AVAILABLE <span id="red"> LATER</span>!{' '}
+      <span className="exp">
+        I'll be back in {timeFormatter(timeUntilWorkTime)}.
+      </span>
     </h3>
   );
 
@@ -57,19 +84,3 @@ function ContactTitle() {
     </>
   );
 }
-
-const getLeftHours = (hourFrom: number, hourTo: number): number => {
-  while (hourTo < hourFrom) hourTo += 12;
-  return hourTo - hourFrom;
-};
-
-const getLeftTime = (dateNow: Date, leftHours: number): string => {
-  const goalDate = new Date();
-  goalDate.setHours(dateNow.getHours() + leftHours); // update hours
-  goalDate.setMinutes(0, 0, 0); // minutes, seconds = 00:00
-
-  const diffDate = new Date(0);
-  diffDate.setMilliseconds(goalDate.getTime() - dateNow.getTime());
-
-  return diffDate.toISOString().substring(11, 19);
-};
