@@ -15,9 +15,7 @@ function App() {
     <div className="page-wrapper">
       <Title />
       <Home />
-      <br />
       <Works />
-      <br />
       <Contact />
     </div>
   );

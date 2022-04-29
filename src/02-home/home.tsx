@@ -6,12 +6,16 @@ export default function Home() {
     <div className="section">
       <h3>HI! I'M JAEHYUK RYU.</h3>
       <CustomFade>
-        <>
+        <p className="general-exp">
           Currently a high school senior in Korea, with particular interests in
           UI/UX.
+          <br />I build websites and web-apps for fun.
           <br />
-          {/* <hr /> */}I build websites and web-apps for fun.
-        </>
+          Primarily built from React and Typescript, this website WEBFACE_DEV is
+          hosted by Github Pages.
+          <br />I adopted the 'Mobile-first approach' in development process; if
+          bugs and glitches are found, please contact me.
+        </p>
       </CustomFade>
     </div>
   );

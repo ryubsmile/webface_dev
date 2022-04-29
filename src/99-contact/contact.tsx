@@ -12,6 +12,16 @@ export default function Contact() {
           EST 8PM and 10AM.
         </>
       </CustomFade>
+      <img
+        className="contact-icon"
+        src={require('./contactIcons/email.png')}
+        alt="gmail"
+      />
+      <img
+        className="contact-icon"
+        src={require('./contactIcons/instagram.png')}
+        alt="gmail"
+      />
     </div>
   );
 }
@@ -60,9 +70,9 @@ function ContactTitle() {
     <>
       <h3>
         I'M AVAILABLE <span id="green"> NOW</span>!{' '}
-        <span className="exp">
+        <div className="exp">
           and until {timeFormatter(remainingWorkTime)} later...
-        </span>
+        </div>
       </h3>
     </>
   );
@@ -70,9 +80,9 @@ function ContactTitle() {
   const notAvailable = (
     <h3>
       I'M AVAILABLE <span id="red"> LATER</span>!{' '}
-      <span className="exp">
+      <div className="exp">
         I'll be back in {timeFormatter(timeUntilWorkTime)}.
-      </span>
+      </div>
     </h3>
   );
 
