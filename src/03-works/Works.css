@@ -2,3 +2,43 @@ hr.divider {
   border: 2px solid grey;
   border-radius: 20%;
 }
+
+#exp {
+  color: rgb(110, 110, 110);
+}
+
+.tech-stacks {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.tech-stacks img {
+  position: relative;
+  width: 50px;
+  /* animation: bounceHorizontally 2s infinite ease-in-out; */
+  animation-delay: 3s;
+}
+
+@keyframes bounceHorizontally {
+  0% {
+    left: 100vw;
+  }
+
+  40% {
+    left: 0;
+  }
+
+  45% {
+    left: 20px;
+  }
+
+  50% {
+    left: 50px;
+  }
+
+  100% {
+    left: -100vw;
+  }
+}

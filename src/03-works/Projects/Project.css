@@ -37,10 +37,10 @@
 }
 
 .exp-box .proj-title {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(180, 180, 180);
   font-weight: 900;
   font-size: 35pt;
+  text-decoration: underline;
 }
 
 .exp-box .proj-exp {

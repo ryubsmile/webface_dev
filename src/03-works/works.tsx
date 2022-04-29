@@ -4,11 +4,65 @@ import Arduino from './Projects/ArduinoRC/ArduinoRC';
 import AmnestyPLUS from './Projects/AmnestyPLUS/AmnestyPLUS';
 import OClock from './Projects/OClock/OClock';
 
+const imgArrays = [
+  <img
+    alt="js"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+  />,
+  <img
+    alt="ts"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
+  />,
+  <img
+    alt="react"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+  />,
+  <img
+    alt="html"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+  />,
+  <img
+    alt="css3"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+  />,
+  <img
+    alt="swift"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+  />,
+  <img
+    alt="arduino"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original-wordmark.svg"
+  />,
+  <img
+    alt="django"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+    style={{ filter: 'brightness(200%)' }}
+  />,
+  <img
+    alt="github"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+    style={{ filter: 'invert(70%)' }}
+  />,
+  <img
+    alt="mysql"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg"
+  />,
+  <img
+    alt="python"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg"
+  />,
+  <img
+    alt="vscode"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+  />,
+];
+
 export default function Works() {
   return (
     <div className="section">
       <h3>WORKS & EXPERIENCES</h3>
-      <p>
+      <div className="tech-stacks">{imgArrays}</div>
+      <p id="exp">
         List of my major works that are well documented. Click on the images to
         learn more.
       </p>
