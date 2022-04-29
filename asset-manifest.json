@@ -1,14 +1,25 @@
 {
   "files": {
-    "main.css": "/webface_dev/static/css/main.843eb259.css",
-    "main.js": "/webface_dev/static/js/main.424b65d6.js",
+    "main.css": "/webface_dev/static/css/main.c7b8c041.css",
+    "main.js": "/webface_dev/static/js/main.e868925e.js",
+    "static/media/vid.png": "/webface_dev/static/media/vid.0c29d677fd48fb588917.png",
+    "static/media/Website-Blur1.png": "/webface_dev/static/media/Website-Blur1.d377b5f897cda57de0ea.png",
+    "static/media/Website-Blur2.png": "/webface_dev/static/media/Website-Blur2.bf6d23adb9ac65a4451a.png",
+    "static/media/img1.png": "/webface_dev/static/media/img1.c66f91ebf7ba506f1a44.png",
+    "static/media/code.png": "/webface_dev/static/media/code.7772f908ee9a3b34679f.png",
+    "static/media/github.png": "/webface_dev/static/media/github.0b94cccae3ee375fcbda.png",
+    "static/media/logo.png": "/webface_dev/static/media/logo.e74e2f0233ddf9bdc44a.png",
+    "static/media/img2.png": "/webface_dev/static/media/img2.10100f7048df34ec0360.png",
+    "static/media/demo.png": "/webface_dev/static/media/demo.a0bf76c98ce58a13274a.png",
     "static/media/RobotoMono-Medium.ttf": "/webface_dev/static/media/RobotoMono-Medium.295d807c15ec4ae6084d.ttf",
+    "static/media/instagram.png": "/webface_dev/static/media/instagram.b4ff9be06a8f84fada1b.png",
+    "static/media/email.png": "/webface_dev/static/media/email.9d4fb065e6679439a9a3.png",
     "index.html": "/webface_dev/index.html",
-    "main.843eb259.css.map": "/webface_dev/static/css/main.843eb259.css.map",
-    "main.424b65d6.js.map": "/webface_dev/static/js/main.424b65d6.js.map"
+    "main.c7b8c041.css.map": "/webface_dev/static/css/main.c7b8c041.css.map",
+    "main.e868925e.js.map": "/webface_dev/static/js/main.e868925e.js.map"
   },
   "entrypoints": [
-    "static/css/main.843eb259.css",
-    "static/js/main.424b65d6.js"
+    "static/css/main.c7b8c041.css",
+    "static/js/main.e868925e.js"
   ]
 }
