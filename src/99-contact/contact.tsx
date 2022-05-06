@@ -12,16 +12,31 @@ export default function Contact() {
           EST 8PM and 10AM.
         </>
       </CustomFade>
-      <img
-        className="contact-icon"
-        src={require('./contactIcons/email.png')}
-        alt="gmail"
-      />
-      <img
-        className="contact-icon"
-        src={require('./contactIcons/instagram.png')}
-        alt="gmail"
-      />
+      <br />
+      <div className="contact-icons">
+        <a
+          href="mailto:ryubsmile@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="icon"
+            src={require('./contactIcons/gmail.png')}
+            alt="gmail"
+          />
+        </a>
+        <a
+          href="instagram.com/ryubsmile"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="icon"
+            src={require('./contactIcons/instagram.png')}
+            alt="instagram"
+          />
+        </a>
+      </div>
     </div>
   );
 }

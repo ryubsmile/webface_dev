@@ -6,8 +6,16 @@
   color: red;
 }
 
-img.contact-icon {
+.contact-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-icons img.icon {
   width: 50px;
+  position: relative;
   height: 50px;
 }
 

@@ -22,7 +22,6 @@ export default function projectExplainer(props: projectRequirements) {
             <div className="sub">{props.sub}</div>
           </div>
         </div>
-
         <div className="exp-box">
           <div className="proj-title">{props.projectName}</div>
           <CustomFade>

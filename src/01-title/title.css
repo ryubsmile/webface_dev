@@ -19,6 +19,6 @@
   left: 0;
   top: calc((100vh - 100vw) / 2);
   width: 100%;
-  filter: invert(5%);
+  filter: invert(2%);
   z-index: -1;
 }
